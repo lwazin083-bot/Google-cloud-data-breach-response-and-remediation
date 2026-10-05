@@ -84,7 +84,7 @@ Limit firewall ports access:  <br/>
 <img src="https://i.imgur.com/KJBmnxp.png" height="80%" width="80%"/>
 <br />
 <br />
-Get rid of ICMP, RDP, and SSH rules which were responsible for allowing unrestricted access to certain network protocols from any source within the VPC network:  <br/>
+Get rid of the ICMP, RDP, and SSH rules which were responsible for allowing unrestricted access to certain network protocols from any source within the VPC network:  <br/>
 <img src="https://i.imgur.com/KJBmnxp.png" height="80%" width="80%"/>
 <br />
 <br />
