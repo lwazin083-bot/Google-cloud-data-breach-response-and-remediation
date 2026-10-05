@@ -45,13 +45,17 @@ In the Google Cloud Compliance section we view the details in PCI DSS 3.2.1 repo
 A new VM(cc-app-02) created from cc-app-01 snapshot: <br/>
 <img src="https://i.imgur.com/xbzJ2Pi.png" height="80%" width="80%"/>
 <br />
+<img src="https://i.imgur.com/pAeyMwF.png" height="80%" width="80%"/>
+<br />
+<img src="https://i.imgur.com/eqxv1xB.png" height="80%" width="80%"/>
+<br />
 <br />
 replacement VM is live but still require hardening:  <br/>
 <img src="https://i.imgur.com/06jdumC.png" height="80%" width="80%"/>
 <br />
 <br />
 <p align="center">
-Hardening our VM :  <br/>
+Hardening our VM by enabling "Secure Boot" :  <br/>
 <img src="https://i.imgur.com/RBb7kQq.png" height="80%" width="80%"/>
 <br />
 <br />
@@ -64,14 +68,33 @@ selecting and deleting the compromised VM:  <br/>
 <img src="https://i.imgur.com/JeBiGlk.png" height="80%" width="80%"/>
 <br />
 <br />
-Revoke public access to the storage bucket and switch to uniform bucket-level access control, significantly reducing the risk of data breaches.s:  <br/>
+Revoke public access to the storage bucket and switch to uniform bucket-level access control, significantly reducing the risk of data breaches:  <br/>
 <img src="https://i.imgur.com/E4DtZYG.png" height="80%" width="80%"/>
+<br />
+<br />
+Remove permissions for the <b>allUsers principals</b>:  <br/>
+<img src="https://i.imgur.com/oRlTi9x.png" height="80%" width="80%"/>
+<br />
+<br />
+Created a new firewall rule to restrict access to RDP and SSH ports to only authorized source networks to minimize the attack surface:  <br/>
+<img src="https://i.imgur.com/kF5l37f.png" height="80%" width="80%"/>
 <br />
 <br />
 Limit firewall ports access:  <br/>
 <img src="https://i.imgur.com/KJBmnxp.png" height="80%" width="80%"/>
 <br />
 <br />
+Get rid of ICMP, RDP, and SSH rules which were responsible for allowing unrestricted access to certain network protocols from any source within the VPC network:  <br/>
+<img src="https://i.imgur.com/KJBmnxp.png" height="80%" width="80%"/>
+<br />
+<br />
+Enable logging for the remaining rules, <b>limit ports</b> and <b>default-allow-internal</b>:
+<img src="https://i.imgur.com/lpbuuAU.png" height="80%" width="80%"/>
+<br />
+<img src="https://i.imgur.com/0A6J5Kc.png" height="80%" width="80%"/>
+<br />
+<br />
+
 
 </p>
 
